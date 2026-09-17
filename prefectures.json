@@ -1,87 +1,914 @@
 {
   "_note": "Annuaire partiel et communautaire. Vérifiez toujours l'information directement auprès de la préfecture avant envoi. Contribuez via une pull request pour compléter la liste.",
   "departements": [
-    {
-      "code": "02A",
-      "nom": "Corse-du-Sud",
-      "autorite": "Préfecture de la Corse-du-Sud",
-      "adresse": "Palais Lantivy, 20188 Ajaccio Cedex 9",
-      "telephone": "04 95 11 12 13",
-      "email": "prefecture@corse-du-sud.gouv.fr",
-      "source": "https://corse-du-sud.gouv.fr"
-    },
-    {
-      "code": "21",
-      "nom": "Côte-d'Or",
-      "autorite": "Préfecture de la Côte-d'Or — Direction des Sécurités, Bureau défense et sécurité",
-      "adresse": "Préfecture de la Côte-d'Or, 21000 Dijon",
-      "telephone": "",
-      "email": "pref-direction-securites@cote-dor.gouv.fr",
-      "source": "https://cote-dor.gouv.fr"
-    },
-    {
-      "code": "46",
-      "nom": "Lot",
-      "autorite": "Préfecture du Lot (zone police) ou mairie concernée (zone gendarmerie)",
-      "adresse": "Préfecture du Lot, 46000 Cahors",
-      "telephone": "",
-      "email": "",
-      "source": "https://lot.gouv.fr"
-    },
-    {
-      "code": "59",
-      "nom": "Nord",
-      "autorite": "Préfecture du Nord — Service régional de la communication interministérielle",
-      "adresse": "12-14 rue Jean sans Peur, CS 20003, 59039 Lille Cedex",
-      "telephone": "03 20 30 52 50",
-      "email": "pref-communication@nord.gouv.fr",
-      "source": "https://www.nord.gouv.fr",
-      "remarque": "Contact général : demandez à être orienté vers le bureau des sécurités / manifestations sur voie publique."
-    },
-    {
-      "code": "63",
-      "nom": "Puy-de-Dôme",
-      "autorite": "Préfecture du Puy-de-Dôme / mairie de la commune concernée selon la zone",
-      "adresse": "Préfecture du Puy-de-Dôme, 63000 Clermont-Ferrand",
-      "telephone": "",
-      "email": "",
-      "source": "https://www.puy-de-dome.gouv.fr"
-    },
-    {
-      "code": "70",
-      "nom": "Haute-Saône",
-      "autorite": "Préfecture de la Haute-Saône",
-      "adresse": "Préfecture de la Haute-Saône, 70000 Vesoul",
-      "telephone": "",
-      "email": "",
-      "source": "https://www.haute-saone.gouv.fr"
-    },
-    {
-      "code": "81",
-      "nom": "Tarn",
-      "autorite": "Préfecture du Tarn — Cabinet/Direction des Sécurités, Bureau de la Sécurité Intérieure",
-      "adresse": "Préfecture du Tarn, Place de la Préfecture, 81013 Albi Cedex 09",
-      "telephone": "",
-      "email": "pref-declamanifestation@tarn.gouv.fr",
-      "source": "https://tarn.gouv.fr"
-    },
-    {
-      "code": "84",
-      "nom": "Vaucluse",
-      "autorite": "Préfecture de Vaucluse",
-      "adresse": "Préfecture de Vaucluse, 84000 Avignon",
-      "telephone": "04 90 86 20 76 (fax)",
-      "email": "pref-contact@vaucluse.gouv.fr",
-      "source": "https://vaucluse.gouv.fr"
-    },
-    {
-      "code": "971-978",
-      "nom": "Saint-Barthélemy / Saint-Martin",
-      "autorite": "Préfecture de Saint-Barthélemy et Saint-Martin",
-      "adresse": "",
-      "telephone": "",
-      "email": "",
-      "source": "https://www.saint-barth-saint-martin.gouv.fr"
-    }
+{
+    "code": "01",
+    "nom": "Ain",
+    "autorite": "Préfecture de l'Ain",
+    "adresse": "45 avenue Alsace-Lorraine, 01000 Bourg-en-Bresse",
+    "telephone": "04 74 32 30 00",
+    "email": "prefecture@ain.gouv.fr",
+    "source": "https://www.ain.gouv.fr"
+  },
+  {
+    "code": "02",
+    "nom": "Aisne",
+    "autorite": "Préfecture de l'Aisne",
+    "adresse": "2 rue Paul-Doumer, 02010 Laon Cedex 9",
+    "telephone": "03 23 21 82 82",
+    "email": "prefecture@aisne.gouv.fr",
+    "source": "https://www.aisne.gouv.fr"
+  },
+  {
+    "code": "03",
+    "nom": "Allier",
+    "autorite": "Préfecture de l'Allier",
+    "adresse": "2 rue Michel-de-L'Hospital, 03016 Moulins Cedex",
+    "telephone": "04 70 48 30 00",
+    "email": "prefecture@allier.gouv.fr",
+    "source": "https://www.allier.gouv.fr"
+  },
+  {
+    "code": "04",
+    "nom": "Alpes-de-Haute-Provence",
+    "autorite": "Préfecture des Alpes-de-Haute-Provence",
+    "adresse": "8 rue du Docteur Romieu, 04016 Digne-les-Bains Cedex",
+    "telephone": "04 92 36 72 00",
+    "email": "prefecture@alpes-de-haute-provence.gouv.fr",
+    "source": "https://www.alpes-de-haute-provence.gouv.fr"
+  },
+  {
+    "code": "05",
+    "nom": "Hautes-Alpes",
+    "autorite": "Préfecture des Hautes-Alpes",
+    "adresse": "28 rue Saint-Arey, 05011 Gap Cedex",
+    "telephone": "04 92 40 48 00",
+    "email": "prefecture@hautes-alpes.gouv.fr",
+    "source": "https://www.hautes-alpes.gouv.fr"
+  },
+  {
+    "code": "06",
+    "nom": "Alpes-Maritimes",
+    "autorite": "Préfecture des Alpes-Maritimes",
+    "adresse": "147 boulevard du Mercantour, 06286 Nice Cedex 3",
+    "telephone": "04 93 72 20 00",
+    "email": "prefecture@alpes-maritimes.gouv.fr",
+    "source": "https://www.alpes-maritimes.gouv.fr"
+  },
+  {
+    "code": "07",
+    "nom": "Ardèche",
+    "autorite": "Préfecture de l'Ardèche",
+    "adresse": "Rue Pierre Filliat, 07000 Privas",
+    "telephone": "04 75 66 50 00",
+    "email": "prefecture@ardeche.gouv.fr",
+    "source": "https://www.ardeche.gouv.fr"
+  },
+  {
+    "code": "08",
+    "nom": "Ardennes",
+    "autorite": "Préfecture des Ardennes",
+    "adresse": "1 place de la Préfecture, 08005 Charleville-Mézières Cedex",
+    "telephone": "03 24 59 66 00",
+    "email": "prefecture@ardennes.gouv.fr",
+    "source": "https://www.ardennes.gouv.fr"
+  },
+  {
+    "code": "09",
+    "nom": "Ariège",
+    "autorite": "Préfecture de l'Ariège",
+    "adresse": "2 rue de la Préfecture, 09007 Foix Cedex",
+    "telephone": "05 61 02 10 00",
+    "email": "prefecture@ariege.gouv.fr",
+    "source": "https://www.ariege.gouv.fr"
+  },
+  {
+    "code": "10",
+    "nom": "Aube",
+    "autorite": "Préfecture de l'Aube",
+    "adresse": "2 rue Pierre-Labonde, 10026 Troyes Cedex",
+    "telephone": "03 25 42 35 00",
+    "email": "prefecture@aube.gouv.fr",
+    "source": "https://www.aube.gouv.fr"
+  },
+  {
+    "code": "11",
+    "nom": "Aude",
+    "autorite": "Préfecture de l'Aude",
+    "adresse": "52 rue Jean-Bringer, 11000 Carcassonne",
+    "telephone": "04 68 10 27 00",
+    "email": "prefecture@aude.gouv.fr",
+    "source": "https://www.aude.gouv.fr"
+  },
+  {
+    "code": "12",
+    "nom": "Aveyron",
+    "autorite": "Préfecture de l'Aveyron",
+    "adresse": "7 place Charles-de-Gaulle, 12000 Rodez",
+    "telephone": "05 65 75 71 71",
+    "email": "prefecture@aveyron.gouv.fr",
+    "source": "https://www.aveyron.gouv.fr"
+  },
+  {
+    "code": "13",
+    "nom": "Bouches-du-Rhône",
+    "autorite": "Préfecture des Bouches-du-Rhône",
+    "adresse": "Place Félix-Baret, 13006 Marseille",
+    "telephone": "04 84 35 40 00",
+    "email": "prefecture@bouches-du-rhone.gouv.fr",
+    "source": "https://www.bouches-du-rhone.gouv.fr"
+  },
+  {
+    "code": "14",
+    "nom": "Calvados",
+    "autorite": "Préfecture du Calvados",
+    "adresse": "Rue Daniel-Huet, 14038 Caen Cedex 9",
+    "telephone": "02 31 30 64 00",
+    "email": "prefecture@calvados.gouv.fr",
+    "source": "https://www.calvados.gouv.fr"
+  },
+  {
+    "code": "15",
+    "nom": "Cantal",
+    "autorite": "Préfecture du Cantal",
+    "adresse": "2 cours Monthyon, 15000 Aurillac",
+    "telephone": "04 71 46 23 00",
+    "email": "prefecture@cantal.gouv.fr",
+    "source": "https://www.cantal.gouv.fr"
+  },
+  {
+    "code": "16",
+    "nom": "Charente",
+    "autorite": "Préfecture de la Charente",
+    "adresse": "7-9 rue de la Préfecture, 16023 Angoulême Cedex",
+    "telephone": "05 45 97 61 00",
+    "email": "prefecture@charente.gouv.fr",
+    "source": "https://www.charente.gouv.fr"
+  },
+  {
+    "code": "17",
+    "nom": "Charente-Maritime",
+    "autorite": "Préfecture de la Charente-Maritime",
+    "adresse": "38 rue Réaumur, 17017 La Rochelle Cedex 1",
+    "telephone": "05 46 27 43 00",
+    "email": "prefecture@charente-maritime.gouv.fr",
+    "source": "https://www.charente-maritime.gouv.fr"
+  },
+  {
+    "code": "18",
+    "nom": "Cher",
+    "autorite": "Préfecture du Cher",
+    "adresse": "Place Marcel-Plaisant, 18020 Bourges Cedex",
+    "telephone": "02 48 67 18 18",
+    "email": "prefecture@cher.gouv.fr",
+    "source": "https://www.cher.gouv.fr"
+  },
+  {
+    "code": "19",
+    "nom": "Corrèze",
+    "autorite": "Préfecture de la Corrèze",
+    "adresse": "1 rue Souham, 19012 Tulle Cedex",
+    "telephone": "05 55 20 55 20",
+    "email": "prefecture@correze.gouv.fr",
+    "source": "https://www.correze.gouv.fr"
+  },
+  {
+    "code": "2A",
+    "nom": "Corse-du-Sud",
+    "autorite": "Préfecture de la Corse-du-Sud",
+    "adresse": "Palais Lantivy, 20188 Ajaccio Cedex 9",
+    "telephone": "04 95 11 12 13",
+    "email": "prefecture@corse-du-sud.gouv.fr",
+    "source": "https://www.corse-du-sud.gouv.fr"
+  },
+  {
+    "code": "2B",
+    "nom": "Haute-Corse",
+    "autorite": "Préfecture de la Haute-Corse",
+    "adresse": "Rond-point du Maréchal-Leclerc-de-Hautecloque, 20401 Bastia Cedex 9",
+    "telephone": "04 95 34 50 00",
+    "email": "prefecture@haute-corse.gouv.fr",
+    "source": "https://www.haute-corse.gouv.fr"
+  },
+  {
+    "code": "21",
+    "nom": "Côte-d'Or",
+    "autorite": "Préfecture de la Côte-d'Or",
+    "adresse": "53 rue de la Préfecture, 21041 Dijon Cedex",
+    "telephone": "03 80 44 64 00",
+    "email": "prefecture@cote-dor.gouv.fr",
+    "source": "https://www.cote-dor.gouv.fr"
+  },
+  {
+    "code": "22",
+    "nom": "Côtes-d'Armor",
+    "autorite": "Préfecture des Côtes-d'Armor",
+    "adresse": "1 place Général-de-Gaulle, 22023 Saint-Brieuc Cedex 1",
+    "telephone": "02 96 62 44 22",
+    "email": "prefecture@cotes-darmor.gouv.fr",
+    "source": "https://www.cotes-darmor.gouv.fr"
+  },
+  {
+    "code": "23",
+    "nom": "Creuse",
+    "autorite": "Préfecture de la Creuse",
+    "adresse": "4 place Louis-Lacrocq, 23011 Guéret Cedex",
+    "telephone": "05 55 51 59 00",
+    "email": "prefecture@creuse.gouv.fr",
+    "source": "https://www.creuse.gouv.fr"
+  },
+  {
+    "code": "24",
+    "nom": "Dordogne",
+    "autorite": "Préfecture de la Dordogne",
+    "adresse": "2 rue Paul-Louis-Courier, 24024 Périgueux Cedex",
+    "telephone": "05 53 02 24 24",
+    "email": "prefecture@dordogne.gouv.fr",
+    "source": "https://www.dordogne.gouv.fr"
+  },
+  {
+    "code": "25",
+    "nom": "Doubs",
+    "autorite": "Préfecture du Doubs",
+    "adresse": "8 bis rue Charles-Nodier, 25035 Besançon Cedex",
+    "telephone": "03 81 25 10 00",
+    "email": "prefecture@doubs.gouv.fr",
+    "source": "https://www.doubs.gouv.fr"
+  },
+  {
+    "code": "26",
+    "nom": "Drôme",
+    "autorite": "Préfecture de la Drôme",
+    "adresse": "3 boulevard Vauban, 26030 Valence Cedex 9",
+    "telephone": "04 75 79 28 00",
+    "email": "prefecture@drome.gouv.fr",
+    "source": "https://www.drome.gouv.fr"
+  },
+  {
+    "code": "27",
+    "nom": "Eure",
+    "autorite": "Préfecture de l'Eure",
+    "adresse": "Boulevard Georges-Chauvin, 27022 Évreux Cedex",
+    "telephone": "02 32 78 27 27",
+    "email": "prefecture@eure.gouv.fr",
+    "source": "https://www.eure.gouv.fr"
+  },
+  {
+    "code": "28",
+    "nom": "Eure-et-Loir",
+    "autorite": "Préfecture d'Eure-et-Loir",
+    "adresse": "Place de la République, 28019 Chartres Cedex",
+    "telephone": "02 37 27 72 00",
+    "email": "prefecture@eure-et-loir.gouv.fr",
+    "source": "https://www.eure-et-loir.gouv.fr"
+  },
+  {
+    "code": "29",
+    "nom": "Finistère",
+    "autorite": "Préfecture du Finistère",
+    "adresse": "42 boulevard Dupleix, 29334 Quimper Cedex",
+    "telephone": "02 98 76 29 29",
+    "email": "prefecture@finistere.gouv.fr",
+    "source": "https://www.finistere.gouv.fr"
+  },
+  {
+    "code": "30",
+    "nom": "Gard",
+    "autorite": "Préfecture du Gard",
+    "adresse": "10 avenue Feuchères, 30045 Nîmes Cedex 9",
+    "telephone": "04 66 36 40 40",
+    "email": "prefecture@gard.gouv.fr",
+    "source": "https://www.gard.gouv.fr"
+  },
+  {
+    "code": "31",
+    "nom": "Haute-Garonne",
+    "autorite": "Préfecture de la Haute-Garonne",
+    "adresse": "1 place Saint-Étienne, 31038 Toulouse Cedex 9",
+    "telephone": "05 34 45 34 45",
+    "email": "prefecture@haute-garonne.gouv.fr",
+    "source": "https://www.haute-garonne.gouv.fr"
+  },
+  {
+    "code": "32",
+    "nom": "Gers",
+    "autorite": "Préfecture du Gers",
+    "adresse": "3 place du Préfet-Claude-Érignac, 32007 Auch Cedex",
+    "telephone": "05 62 61 44 00",
+    "email": "prefecture@gers.gouv.fr",
+    "source": "https://www.gers.gouv.fr"
+  },
+  {
+    "code": "33",
+    "nom": "Gironde",
+    "autorite": "Préfecture de la Gironde",
+    "adresse": "2 esplanade Charles-de-Gaulle, 33077 Bordeaux Cedex",
+    "telephone": "05 56 90 60 60",
+    "email": "prefecture@gironde.gouv.fr",
+    "source": "https://www.gironde.gouv.fr"
+  },
+  {
+    "code": "34",
+    "nom": "Hérault",
+    "autorite": "Préfecture de l'Hérault",
+    "adresse": "34 place des Martyrs-de-la-Résistance, 34062 Montpellier Cedex 2",
+    "telephone": "04 67 61 61 61",
+    "email": "prefecture@herault.gouv.fr",
+    "source": "https://www.herault.gouv.fr"
+  },
+  {
+    "code": "35",
+    "nom": "Ille-et-Vilaine",
+    "autorite": "Préfecture d'Ille-et-Vilaine",
+    "adresse": "81 boulevard d'Armorique, 35026 Rennes Cedex 9",
+    "telephone": "02 21 86 25 35",
+    "email": "prefecture@ille-et-vilaine.gouv.fr",
+    "source": "https://www.ille-et-vilaine.gouv.fr"
+  },
+  {
+    "code": "36",
+    "nom": "Indre",
+    "autorite": "Préfecture de l'Indre",
+    "adresse": "Place de la Victoire et des Alliés, 36019 Châteauroux Cedex",
+    "telephone": "02 54 29 50 00",
+    "email": "prefecture@indre.gouv.fr",
+    "source": "https://www.indre.gouv.fr"
+  },
+  {
+    "code": "37",
+    "nom": "Indre-et-Loire",
+    "autorite": "Préfecture d'Indre-et-Loire",
+    "adresse": "15 rue Bernard-Palissy, 37925 Tours Cedex 9",
+    "telephone": "02 47 64 37 37",
+    "email": "prefecture@indre-et-loire.gouv.fr",
+    "source": "https://www.indre-et-loire.gouv.fr"
+  },
+  {
+    "code": "38",
+    "nom": "Isère",
+    "autorite": "Préfecture de l'Isère",
+    "adresse": "12 place de Verdun, 38000 Grenoble",
+    "telephone": "04 56 60 49 49",
+    "email": "prefecture@isere.gouv.fr",
+    "source": "https://www.isere.gouv.fr"
+  },
+  {
+    "code": "39",
+    "nom": "Jura",
+    "autorite": "Préfecture du Jura",
+    "adresse": "8 rue de la Préfecture, 39030 Lons-le-Saunier Cedex",
+    "telephone": "03 84 86 84 00",
+    "email": "prefecture@jura.gouv.fr",
+    "source": "https://www.jura.gouv.fr"
+  },
+  {
+    "code": "40",
+    "nom": "Landes",
+    "autorite": "Préfecture des Landes",
+    "adresse": "24 rue Victor-Hugo, 40021 Mont-de-Marsan Cedex",
+    "telephone": "05 58 06 58 06",
+    "email": "prefecture@landes.gouv.fr",
+    "source": "https://www.landes.gouv.fr"
+  },
+  {
+    "code": "41",
+    "nom": "Loir-et-Cher",
+    "autorite": "Préfecture de Loir-et-Cher",
+    "adresse": "Place de la République, 41018 Blois Cedex",
+    "telephone": "02 54 81 54 81",
+    "email": "prefecture@loir-et-cher.gouv.fr",
+    "source": "https://www.loir-et-cher.gouv.fr"
+  },
+  {
+    "code": "42",
+    "nom": "Loire",
+    "autorite": "Préfecture de la Loire",
+    "adresse": "2 rue Charles-de-Gaulle, 42022 Saint-Étienne Cedex 1",
+    "telephone": "04 77 48 48 48",
+    "email": "prefecture@loire.gouv.fr",
+    "source": "https://www.loire.gouv.fr"
+  },
+  {
+    "code": "43",
+    "nom": "Haute-Loire",
+    "autorite": "Préfecture de la Haute-Loire",
+    "adresse": "6 avenue du Général-de-Gaulle, 43012 Le Puy-en-Velay Cedex",
+    "telephone": "04 71 09 43 43",
+    "email": "prefecture@haute-loire.gouv.fr",
+    "source": "https://www.haute-loire.gouv.fr"
+  },
+  {
+    "code": "44",
+    "nom": "Loire-Atlantique",
+    "autorite": "Préfecture de la Loire-Atlantique",
+    "adresse": "6 quai Ceineray, 44035 Nantes Cedex 1",
+    "telephone": "02 40 41 20 20",
+    "email": "prefecture@loire-atlantique.gouv.fr",
+    "source": "https://www.loire-atlantique.gouv.fr"
+  },
+  {
+    "code": "45",
+    "nom": "Loiret",
+    "autorite": "Préfecture du Loiret",
+    "adresse": "181 rue de Bourgogne, 45042 Orléans Cedex 1",
+    "telephone": "02 38 81 40 00",
+    "email": "prefecture@loiret.gouv.fr",
+    "source": "https://www.loiret.gouv.fr"
+  },
+  {
+    "code": "46",
+    "nom": "Lot",
+    "autorite": "Préfecture du Lot",
+    "adresse": "Place Chapou, 46009 Cahors Cedex 9",
+    "telephone": "05 65 23 10 00",
+    "email": "prefecture@lot.gouv.fr",
+    "source": "https://www.lot.gouv.fr"
+  },
+  {
+    "code": "47",
+    "nom": "Lot-et-Garonne",
+    "autorite": "Préfecture de Lot-et-Garonne",
+    "adresse": "Place de Verdun, 47920 Agen Cedex 9",
+    "telephone": "05 53 77 60 00",
+    "email": "prefecture@lot-et-garonne.gouv.fr",
+    "source": "https://www.lot-et-garonne.gouv.fr"
+  },
+  {
+    "code": "48",
+    "nom": "Lozère",
+    "autorite": "Préfecture de la Lozère",
+    "adresse": "2 rue de la Rovère, 48005 Mende Cedex",
+    "telephone": "04 66 49 60 00",
+    "email": "prefecture@lozere.gouv.fr",
+    "source": "https://www.lozere.gouv.fr"
+  },
+  {
+    "code": "49",
+    "nom": "Maine-et-Loire",
+    "autorite": "Préfecture de Maine-et-Loire",
+    "adresse": "Place Michel-Debré, 49934 Angers Cedex 9",
+    "telephone": "02 41 81 81 81",
+    "email": "prefecture@maine-et-loire.gouv.fr",
+    "source": "https://www.maine-et-loire.gouv.fr"
+  },
+  {
+    "code": "50",
+    "nom": "Manche",
+    "autorite": "Préfecture de la Manche",
+    "adresse": "Place de la Préfecture, 50002 Saint-Lô Cedex",
+    "telephone": "02 33 75 49 50",
+    "email": "prefecture@manche.gouv.fr",
+    "source": "https://www.manche.gouv.fr"
+  },
+  {
+    "code": "51",
+    "nom": "Marne",
+    "autorite": "Préfecture de la Marne",
+    "adresse": "1 rue de Jessaint, 51036 Châlons-en-Champagne Cedex",
+    "telephone": "03 26 26 10 10",
+    "email": "prefecture@marne.gouv.fr",
+    "source": "https://www.marne.gouv.fr"
+  },
+  {
+    "code": "52",
+    "nom": "Haute-Marne",
+    "autorite": "Préfecture de la Haute-Marne",
+    "adresse": "89 rue Victoire-de-la-Marne, 52011 Chaumont Cedex",
+    "telephone": "03 25 30 52 52",
+    "email": "prefecture@haute-marne.gouv.fr",
+    "source": "https://www.haute-marne.gouv.fr"
+  },
+  {
+    "code": "53",
+    "nom": "Mayenne",
+    "autorite": "Préfecture de la Mayenne",
+    "adresse": "46 rue Mazagran, 53015 Laval Cedex",
+    "telephone": "02 43 01 50 00",
+    "email": "prefecture@mayenne.gouv.fr",
+    "source": "https://www.mayenne.gouv.fr"
+  },
+  {
+    "code": "54",
+    "nom": "Meurthe-et-Moselle",
+    "autorite": "Préfecture de Meurthe-et-Moselle",
+    "adresse": "1 rue Préfet-Claude-Érignac, 54038 Nancy Cedex",
+    "telephone": "03 83 34 26 26",
+    "email": "prefecture@meurthe-et-moselle.gouv.fr",
+    "source": "https://www.meurthe-et-moselle.gouv.fr"
+  },
+  {
+    "code": "55",
+    "nom": "Meuse",
+    "autorite": "Préfecture de la Meuse",
+    "adresse": "40 rue du Bourg, 55012 Bar-le-Duc Cedex",
+    "telephone": "03 29 77 55 55",
+    "email": "prefecture@meuse.gouv.fr",
+    "source": "https://www.meuse.gouv.fr"
+  },
+  {
+    "code": "56",
+    "nom": "Morbihan",
+    "autorite": "Préfecture du Morbihan",
+    "adresse": "24 place de la République, 56019 Vannes Cedex",
+    "telephone": "02 97 54 84 00",
+    "email": "prefecture@morbihan.gouv.fr",
+    "source": "https://www.morbihan.gouv.fr"
+  },
+  {
+    "code": "57",
+    "nom": "Moselle",
+    "autorite": "Préfecture de la Moselle",
+    "adresse": "9 place de la Préfecture, 57034 Metz Cedex 1",
+    "telephone": "03 87 34 87 34",
+    "email": "prefecture@moselle.gouv.fr",
+    "source": "https://www.moselle.gouv.fr"
+  },
+  {
+    "code": "58",
+    "nom": "Nièvre",
+    "autorite": "Préfecture de la Nièvre",
+    "adresse": "40 rue de la Préfecture, 58026 Nevers Cedex",
+    "telephone": "03 86 60 70 80",
+    "email": "prefecture@nievre.gouv.fr",
+    "source": "https://www.nievre.gouv.fr"
+  },
+  {
+    "code": "59",
+    "nom": "Nord",
+    "autorite": "Préfecture du Nord",
+    "adresse": "12-14 rue Jean-sans-Peur, 59039 Lille Cedex",
+    "telephone": "03 20 30 59 59",
+    "email": "prefecture@nord.gouv.fr",
+    "source": "https://www.nord.gouv.fr"
+  },
+  {
+    "code": "60",
+    "nom": "Oise",
+    "autorite": "Préfecture de l'Oise",
+    "adresse": "1 place de la Préfecture, 60022 Beauvais Cedex",
+    "telephone": "03 44 06 12 60",
+    "email": "prefecture@oise.gouv.fr",
+    "source": "https://www.oise.gouv.fr"
+  },
+  {
+    "code": "61",
+    "nom": "Orne",
+    "autorite": "Préfecture de l'Orne",
+    "adresse": "39 rue Saint-Blaise, 61018 Alençon Cedex",
+    "telephone": "02 33 80 61 61",
+    "email": "prefecture@orne.gouv.fr",
+    "source": "https://www.orne.gouv.fr"
+  },
+  {
+    "code": "62",
+    "nom": "Pas-de-Calais",
+    "autorite": "Préfecture du Pas-de-Calais",
+    "adresse": "Rue Ferdinand-Buisson, 62020 Arras Cedex 9",
+    "telephone": "03 21 21 20 00",
+    "email": "prefecture@pas-de-calais.gouv.fr",
+    "source": "https://www.pas-de-calais.gouv.fr"
+  },
+  {
+    "code": "63",
+    "nom": "Puy-de-Dôme",
+    "autorite": "Préfecture du Puy-de-Dôme",
+    "adresse": "18 boulevard Desaix, 63033 Clermont-Ferrand Cedex 1",
+    "telephone": "04 73 98 63 63",
+    "email": "prefecture@puy-de-dome.gouv.fr",
+    "source": "https://www.puy-de-dome.gouv.fr"
+  },
+  {
+    "code": "64",
+    "nom": "Pyrénées-Atlantiques",
+    "autorite": "Préfecture des Pyrénées-Atlantiques",
+    "adresse": "2 rue Maréchal-Joffre, 64021 Pau Cedex",
+    "telephone": "05 59 98 24 24",
+    "email": "prefecture@pyrenees-atlantiques.gouv.fr",
+    "source": "https://www.pyrenees-atlantiques.gouv.fr"
+  },
+  {
+    "code": "65",
+    "nom": "Hautes-Pyrénées",
+    "autorite": "Préfecture des Hautes-Pyrénées",
+    "adresse": "Place du Général-de-Gaulle, 65013 Tarbes Cedex 9",
+    "telephone": "05 62 56 65 65",
+    "email": "prefecture@hautes-pyrenees.gouv.fr",
+    "source": "https://www.hautes-pyrenees.gouv.fr"
+  },
+  {
+    "code": "66",
+    "nom": "Pyrénées-Orientales",
+    "autorite": "Préfecture des Pyrénées-Orientales",
+    "adresse": "24 quai Sadi-Carnot, 66020 Perpignan Cedex",
+    "telephone": "04 68 51 66 66",
+    "email": "prefecture@pyrenees-orientales.gouv.fr",
+    "source": "https://www.pyrenees-orientales.gouv.fr"
+  },
+  {
+    "code": "67",
+    "nom": "Bas-Rhin",
+    "autorite": "Préfecture du Bas-Rhin",
+    "adresse": "5 place de la République, 67073 Strasbourg Cedex",
+    "telephone": "03 88 21 67 68",
+    "email": "prefecture@bas-rhin.gouv.fr",
+    "source": "https://www.bas-rhin.gouv.fr"
+  },
+  {
+    "code": "68",
+    "nom": "Haut-Rhin",
+    "autorite": "Préfecture du Haut-Rhin",
+    "adresse": "7 rue Bruat, 68020 Colmar Cedex",
+    "telephone": "03 89 29 20 00",
+    "email": "prefecture@haut-rhin.gouv.fr",
+    "source": "https://www.haut-rhin.gouv.fr"
+  },
+  {
+    "code": "69",
+    "nom": "Rhône",
+    "autorite": "Préfecture du Rhône",
+    "adresse": "106 rue Pierre-Corneille, 69419 Lyon Cedex 03",
+    "telephone": "04 72 61 60 60",
+    "email": "prefecture@rhone.gouv.fr",
+    "source": "https://www.rhone.gouv.fr"
+  },
+  {
+    "code": "70",
+    "nom": "Haute-Saône",
+    "autorite": "Préfecture de la Haute-Saône",
+    "adresse": "1 rue de la Préfecture, 70013 Vesoul Cedex",
+    "telephone": "03 84 77 70 00",
+    "email": "prefecture@haute-saone.gouv.fr",
+    "source": "https://www.haute-saone.gouv.fr"
+  },
+  {
+    "code": "71",
+    "nom": "Saône-et-Loire",
+    "autorite": "Préfecture de Saône-et-Loire",
+    "adresse": "196 rue de Strasbourg, 71070 Mâcon Cedex 9",
+    "telephone": "03 85 21 81 00",
+    "email": "prefecture@saone-et-loire.gouv.fr",
+    "source": "https://www.saone-et-loire.gouv.fr"
+  },
+  {
+    "code": "72",
+    "nom": "Sarthe",
+    "autorite": "Préfecture de la Sarthe",
+    "adresse": "Place Aristide-Briand, 72041 Le Mans Cedex 9",
+    "telephone": "02 43 39 72 72",
+    "email": "prefecture@sarthe.gouv.fr",
+    "source": "https://www.sarthe.gouv.fr"
+  },
+  {
+    "code": "73",
+    "nom": "Savoie",
+    "autorite": "Préfecture de la Savoie",
+    "adresse": "Château des Ducs de Savoie, 73018 Chambéry Cedex",
+    "telephone": "04 79 75 50 00",
+    "email": "prefecture@savoie.gouv.fr",
+    "source": "https://www.savoie.gouv.fr"
+  },
+  {
+    "code": "74",
+    "nom": "Haute-Savoie",
+    "autorite": "Préfecture de la Haute-Savoie",
+    "adresse": "Rue Louis-Armand, 74000 Annecy",
+    "telephone": "04 50 33 60 00",
+    "email": "prefecture@haute-savoie.gouv.fr",
+    "source": "https://www.haute-savoie.gouv.fr"
+  },
+  {
+    "code": "75",
+    "nom": "Paris",
+    "autorite": "Préfecture de Paris",
+    "adresse": "5 rue Leblanc, 75911 Paris Cedex 15",
+    "telephone": "01 82 52 40 00",
+    "email": "prefecture@paris.gouv.fr",
+    "source": "https://www.prefectures-regions.gouv.fr/ile-de-france"
+  },
+  {
+    "code": "76",
+    "nom": "Seine-Maritime",
+    "autorite": "Préfecture de la Seine-Maritime",
+    "adresse": "7 place de la Madeleine, 76036 Rouen Cedex",
+    "telephone": "02 32 76 50 00",
+    "email": "prefecture@seine-maritime.gouv.fr",
+    "source": "https://www.seine-maritime.gouv.fr"
+  },
+  {
+    "code": "77",
+    "nom": "Seine-et-Marne",
+    "autorite": "Préfecture de Seine-et-Marne",
+    "adresse": "12 rue des Saints-Pères, 77010 Melun Cedex",
+    "telephone": "01 64 71 77 77",
+    "email": "prefecture@seine-et-marne.gouv.fr",
+    "source": "https://www.seine-et-marne.gouv.fr"
+  },
+  {
+    "code": "78",
+    "nom": "Yvelines",
+    "autorite": "Préfecture des Yvelines",
+    "adresse": "1 avenue de l'Europe, 78000 Versailles",
+    "telephone": "01 39 49 78 00",
+    "email": "prefecture@yvelines.gouv.fr",
+    "source": "https://www.yvelines.gouv.fr"
+  },
+  {
+    "code": "79",
+    "nom": "Deux-Sèvres",
+    "autorite": "Préfecture des Deux-Sèvres",
+    "adresse": "4 rue Duguesclin, 79099 Niort Cedex 9",
+    "telephone": "05 49 08 68 68",
+    "email": "prefecture@deux-sevres.gouv.fr",
+    "source": "https://www.deux-sevres.gouv.fr"
+  },
+  {
+    "code": "80",
+    "nom": "Somme",
+    "autorite": "Préfecture de la Somme",
+    "adresse": "51 rue de la République, 80020 Amiens Cedex 9",
+    "telephone": "03 22 97 80 80",
+    "email": "prefecture@somme.gouv.fr",
+    "source": "https://www.somme.gouv.fr"
+  },
+  {
+    "code": "81",
+    "nom": "Tarn",
+    "autorite": "Préfecture du Tarn",
+    "adresse": "Place de la Préfecture, 81013 Albi Cedex 9",
+    "telephone": "05 63 45 61 61",
+    "email": "prefecture@tarn.gouv.fr",
+    "source": "https://www.tarn.gouv.fr"
+  },
+  {
+    "code": "82",
+    "nom": "Tarn-et-Garonne",
+    "autorite": "Préfecture de Tarn-et-Garonne",
+    "adresse": "2 boulevard Midi-Pyrénées, 82013 Montauban Cedex",
+    "telephone": "05 63 22 82 00",
+    "email": "prefecture@tarn-et-garonne.gouv.fr",
+    "source": "https://www.tarn-et-garonne.gouv.fr"
+  },
+  {
+    "code": "83",
+    "nom": "Var",
+    "autorite": "Préfecture du Var",
+    "adresse": "Boulevard du 112e-Régiment-d'Infanterie, 83070 Toulon Cedex",
+    "telephone": "04 94 18 83 83",
+    "email": "prefecture@var.gouv.fr",
+    "source": "https://www.var.gouv.fr"
+  },
+  {
+    "code": "84",
+    "nom": "Vaucluse",
+    "autorite": "Préfecture de Vaucluse",
+    "adresse": "2 avenue de la Folie, 84905 Avignon Cedex 9",
+    "telephone": "04 88 17 84 84",
+    "email": "prefecture@vaucluse.gouv.fr",
+    "source": "https://www.vaucluse.gouv.fr"
+  },
+  {
+    "code": "85",
+    "nom": "Vendée",
+    "autorite": "Préfecture de la Vendée",
+    "adresse": "29 rue Dellile, 85022 La Roche-sur-Yon Cedex",
+    "telephone": "02 51 36 70 85",
+    "email": "prefecture@vendee.gouv.fr",
+    "source": "https://www.vendee.gouv.fr"
+  },
+  {
+    "code": "86",
+    "nom": "Vienne",
+    "autorite": "Préfecture de la Vienne",
+    "adresse": "7 place Aristide-Briand, 86021 Poitiers Cedex",
+    "telephone": "05 49 55 70 00",
+    "email": "prefecture@vienne.gouv.fr",
+    "source": "https://www.vienne.gouv.fr"
+  },
+  {
+    "code": "87",
+    "nom": "Haute-Vienne",
+    "autorite": "Préfecture de la Haute-Vienne",
+    "adresse": "1 rue de la Préfecture, 87031 Limoges Cedex",
+    "telephone": "05 55 44 18 00",
+    "email": "prefecture@haute-vienne.gouv.fr",
+    "source": "https://www.haute-vienne.gouv.fr"
+  },
+  {
+    "code": "88",
+    "nom": "Vosges",
+    "autorite": "Préfecture des Vosges",
+    "adresse": "Place Foch, 88026 Épinal Cedex",
+    "telephone": "03 29 69 88 88",
+    "email": "prefecture@vosges.gouv.fr",
+    "source": "https://www.vosges.gouv.fr"
+  },
+  {
+    "code": "89",
+    "nom": "Yonne",
+    "autorite": "Préfecture de l'Yonne",
+    "adresse": "Place de la Préfecture, 89011 Auxerre Cedex",
+    "telephone": "03 86 72 79 89",
+    "email": "prefecture@yonne.gouv.fr",
+    "source": "https://www.yonne.gouv.fr"
+  },
+  {
+    "code": "90",
+    "nom": "Territoire de Belfort",
+    "autorite": "Préfecture du Territoire de Belfort",
+    "adresse": "1 rue Bartholdi, 90020 Belfort Cedex",
+    "telephone": "03 84 57 00 07",
+    "email": "prefecture@territoire-de-belfort.gouv.fr",
+    "source": "https://www.territoire-de-belfort.gouv.fr"
+  },
+  {
+    "code": "91",
+    "nom": "Essonne",
+    "autorite": "Préfecture de l'Essonne",
+    "adresse": "Boulevard de France, 91010 Évry-Courcouronnes Cedex",
+    "telephone": "01 69 91 91 91",
+    "email": "prefecture@essonne.gouv.fr",
+    "source": "https://www.essonne.gouv.fr"
+  },
+  {
+    "code": "92",
+    "nom": "Hauts-de-Seine",
+    "autorite": "Préfecture des Hauts-de-Seine",
+    "adresse": "167-177 avenue Joliot-Curie, 92013 Nanterre Cedex",
+    "telephone": "01 40 97 20 00",
+    "email": "prefecture@hauts-de-seine.gouv.fr",
+    "source": "https://www.hauts-de-seine.gouv.fr"
+  },
+  {
+    "code": "93",
+    "nom": "Seine-Saint-Denis",
+    "autorite": "Préfecture de la Seine-Saint-Denis",
+    "adresse": "1 esplanade Jean-Moulin, 93000 Bobigny",
+    "telephone": "01 41 60 60 60",
+    "email": "prefecture@seine-saint-denis.gouv.fr",
+    "source": "https://www.seine-saint-denis.gouv.fr"
+  },
+  {
+    "code": "94",
+    "nom": "Val-de-Marne",
+    "autorite": "Préfecture du Val-de-Marne",
+    "adresse": "21-29 avenue du Général-de-Gaulle, 94038 Créteil Cedex",
+    "telephone": "01 49 56 60 00",
+    "email": "prefecture@val-de-marne.gouv.fr",
+    "source": "https://www.val-de-marne.gouv.fr"
+  },
+  {
+    "code": "95",
+    "nom": "Val-d'Oise",
+    "autorite": "Préfecture du Val-d'Oise",
+    "adresse": "5 avenue Bernard-Hirsch, 95010 Cergy-Pontoise Cedex",
+    "telephone": "01 34 20 95 95",
+    "email": "prefecture@val-doise.gouv.fr",
+    "source": "https://www.val-doise.gouv.fr"
+  },
+  {
+    "code": "971",
+    "nom": "Guadeloupe",
+    "autorite": "Préfecture de la Guadeloupe",
+    "adresse": "Rue Lardenoy, 97100 Basse-Terre",
+    "telephone": "05 90 99 39 00",
+    "email": "prefecture@guadeloupe.gouv.fr",
+    "source": "https://www.guadeloupe.gouv.fr"
+  },
+  {
+    "code": "972",
+    "nom": "Martinique",
+    "autorite": "Préfecture de la Martinique",
+    "adresse": "Rue Victor-Sévère, 97200 Fort-de-France",
+    "telephone": "05 96 39 36 00",
+    "email": "prefecture@martinique.gouv.fr",
+    "source": "https://www.martinique.gouv.fr"
+  },
+  {
+    "code": "973",
+    "nom": "Guyane",
+    "autorite": "Préfecture de la Guyane",
+    "adresse": "Rue Fiedmond, 97300 Cayenne",
+    "telephone": "05 94 39 45 00",
+    "email": "prefecture@guyane.gouv.fr",
+    "source": "https://www.guyane.gouv.fr"
+  },
+  {
+    "code": "974",
+    "nom": "La Réunion",
+    "autorite": "Préfecture de La Réunion",
+    "adresse": "6 rue des Messageries, 97400 Saint-Denis",
+    "telephone": "02 62 40 77 77",
+    "email": "prefecture@reunion.gouv.fr",
+    "source": "https://www.reunion.gouv.fr"
+  },
+  {
+    "code": "976",
+    "nom": "Mayotte",
+    "autorite": "Préfecture de Mayotte",
+    "adresse": "Rue de la Préfecture, 97600 Mamoudzou",
+    "telephone": "02 69 63 50 00",
+    "email": "prefecture@mayotte.gouv.fr",
+    "source": "https://www.mayotte.gouv.fr"
+  }
   ]
 }
