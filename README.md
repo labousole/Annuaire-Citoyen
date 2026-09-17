@@ -45,14 +45,6 @@ annuaire-citoyen/
 module partagé — à harmoniser si vous voulez unifier complètement le
 design system.
 
-## Déployer sur GitHub Pages
-
-1. Poussez ce dossier tel quel dans un dépôt GitHub.
-2. Paramètres du dépôt → **Pages** → branche `main`, dossier racine `/`.
-3. Le site est disponible à `https://<votre-utilisateur>.github.io/<nom-du-depot>/`.
-
-Aucune étape de build : tout est statique, jsPDF est chargé depuis un CDN.
-
 ## Ajouter un nouvel outil
 
 1. Créez un dossier `<nom-de-loutil>/` avec un `index.html` et un `app.js`.
