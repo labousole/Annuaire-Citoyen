@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mise en demeure</title>
+<meta name="description" content="Générez une mise en demeure amiable avant toute procédure judiciaire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Outil indépendant &middot; non affilié à l'État</p>
+    <h1>Mise en demeure</h1>
+    <p class="lede">Formalisez une dernière demande amiable avant toute action judiciaire. Rien de ce que vous saisissez n'est transmis à un serveur.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back-link" href="../index.html">&larr; Retour à l'annuaire</a>
+
+  <section class="card law">
+    <h2>Le cadre légal, en bref</h2>
+    <ol class="law-list">
+      <li>La mise en demeure formalise une demande précise adressée à votre débiteur (bailleur, prestataire, employeur…), avant toute saisine du tribunal.</li>
+      <li>Pour de nombreux litiges de consommation, une tentative de résolution amiable — dont la mise en demeure fait partie — est un préalable recommandé, voire obligatoire pour les litiges de faible montant avant saisine du juge (conciliation ou médiation).</li>
+      <li>Elle fixe un <strong>délai raisonnable</strong> (souvent 8 à 15 jours) pour que le débiteur s'exécute, faute de quoi une action en justice devient possible.</li>
+      <li>L'envoi en lettre recommandée avec accusé de réception fait courir les intérêts de retard et constitue une preuve en cas de procédure ultérieure.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>Rédigez votre mise en demeure</h2>
+    <form id="declaration-form">
+      <fieldset>
+        <legend>Vous</legend>
+        <div class="field">
+          <label for="nom">Nom et prénom</label>
+          <input type="text" id="nom" required>
+        </div>
+        <div class="field">
+          <label for="adresse">Adresse</label>
+          <textarea id="adresse" rows="2"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Le litige</legend>
+        <div class="field">
+          <label for="destinataire">Destinataire (nom, adresse)</label>
+          <textarea id="destinataire" rows="2"></textarea>
+        </div>
+        <div class="field">
+          <label for="objet">Objet du litige (obligatoire)</label>
+          <textarea id="objet" rows="2" required placeholder="Ex. loyer impayé, prestation non exécutée, remboursement non effectué…"></textarea>
+        </div>
+        <div class="field">
+          <label for="faits">Rappel des faits et démarches déjà entreprises (obligatoire)</label>
+          <textarea id="faits" rows="4" required></textarea>
+        </div>
+        <div class="field">
+          <label for="demande">Ce que vous demandez précisément</label>
+          <textarea id="demande" rows="2" placeholder="Ex. paiement de la somme de …, exécution de la prestation, remboursement…"></textarea>
+        </div>
+        <div class="field">
+          <label for="delai">Délai laissé pour s'exécuter</label>
+          <select id="delai">
+            <option value="8 jours">8 jours</option>
+            <option value="15 jours">15 jours</option>
+            <option value="30 jours">30 jours</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="button" id="generate-pdf" class="btn-primary">Générer la mise en demeure PDF</button>
+        <button type="reset" class="btn-secondary">Effacer le formulaire</button>
+      </div>
+      <p class="hint small">Envoyez impérativement en lettre recommandée avec accusé de réception : c'est cette preuve d'envoi qui donne sa valeur à la mise en demeure.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Avertissement.</strong> Ce site est un projet indépendant, non édité ni approuvé par l'État. Il se limite à générer un document ; il ne collecte aucune donnée saisie. Pour un litige complexe ou un montant important, l'avis d'un professionnel du droit reste recommandé.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../shared/shared.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Droit de retrait — attestation type</title>
+<meta name="description" content="Générez une attestation d'exercice du droit de retrait face à un danger grave et imminent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Outil indépendant &middot; non affilié à l'État</p>
+    <h1>Droit de retrait</h1>
+    <p class="lede">Formalisez l'exercice de votre droit de retrait face à un danger grave et imminent. Rien de ce que vous saisissez n'est transmis à un serveur.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back-link" href="../index.html">&larr; Retour à l'annuaire</a>
+
+  <section class="card law">
+    <h2>Le cadre légal, en bref</h2>
+    <ol class="law-list">
+      <li>Tout salarié peut se retirer d'une situation de travail dont il a un motif raisonnable de penser qu'elle présente un <strong>danger grave et imminent</strong> pour sa vie ou sa santé (article L4131-1 du code du travail).</li>
+      <li>Aucune sanction ni retenue de salaire ne peut être appliquée à un salarié ayant exercé ce droit de bonne foi, même si le danger s'avère finalement inexistant.</li>
+      <li>Le salarié doit alerter immédiatement l'employeur ou son représentant (supérieur hiérarchique, membre du CSE).</li>
+      <li>Le droit de retrait ne doit pas créer pour autrui une nouvelle situation de danger grave et imminent.</li>
+      <li>Il n'existe pas de formalisme légal obligatoire, mais une attestation écrite et datée facilite la preuve de la bonne foi et de l'alerte immédiate.</li>
+    </ol>
+    <p class="warning"><strong>Priorité —</strong> si le danger est réel et immédiat, mettez-vous d'abord en sécurité et alertez oralement votre hiérarchie. L'attestation écrite vient ensuite, pour garder une trace.</p>
+  </section>
+
+  <section class="card">
+    <h2>Rédigez votre attestation</h2>
+    <form id="declaration-form">
+      <fieldset>
+        <legend>Vous</legend>
+        <div class="field">
+          <label for="nom">Nom et prénom</label>
+          <input type="text" id="nom" required>
+        </div>
+        <div class="field">
+          <label for="poste">Poste occupé</label>
+          <input type="text" id="poste">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>La situation</legend>
+        <div class="field">
+          <label for="employeur">Employeur / établissement</label>
+          <input type="text" id="employeur">
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="date-fait">Date</label>
+            <input type="date" id="date-fait">
+          </div>
+          <div class="field">
+            <label for="heure-fait">Heure</label>
+            <input type="time" id="heure-fait">
+          </div>
+        </div>
+        <div class="field">
+          <label for="danger">Description précise du danger constaté (obligatoire)</label>
+          <textarea id="danger" rows="4" required placeholder="Faits observés, équipement ou situation en cause, raisons de penser que le danger est grave et imminent…"></textarea>
+        </div>
+        <div class="field">
+          <label for="alerte">Personne alertée et modalité de l'alerte</label>
+          <input type="text" id="alerte" placeholder="Ex. M./Mme X, supérieur hiérarchique, alerté oralement puis par ce courrier">
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="button" id="generate-pdf" class="btn-primary">Générer l'attestation PDF</button>
+        <button type="reset" class="btn-secondary">Effacer le formulaire</button>
+      </div>
+      <p class="hint small">Remettez ou envoyez cette attestation à votre employeur le plus rapidement possible après avoir alerté oralement.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Avertissement.</strong> Ce site est un projet indépendant, non édité ni approuvé par l'État. Il se limite à générer un document ; il ne collecte aucune donnée saisie. En cas de danger immédiat, votre sécurité prime sur toute démarche administrative.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../shared/shared.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

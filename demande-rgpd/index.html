@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercer ses droits RGPD (accès, rectification, effacement)</title>
+<meta name="description" content="Générez une demande d'exercice de vos droits RGPD auprès d'un organisme, avec calcul du délai de réponse.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Outil indépendant &middot; non affilié à l'État</p>
+    <h1>Exercer ses droits RGPD</h1>
+    <p class="lede">Demandez l'accès, la rectification ou l'effacement de vos données personnelles auprès d'un organisme. Rien de ce que vous saisissez n'est transmis à un serveur.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back-link" href="../index.html">&larr; Retour à l'annuaire</a>
+
+  <section class="card law">
+    <h2>Le cadre légal, en bref</h2>
+    <ol class="law-list">
+      <li>Le règlement général sur la protection des données (RGPD) vous donne le droit d'accéder à vos données, de les faire rectifier, de demander leur effacement, ou de vous opposer à leur traitement (articles 15 à 21 du RGPD).</li>
+      <li>L'organisme doit répondre dans un délai d'<strong>un mois</strong>, prolongeable de deux mois supplémentaires pour une demande complexe (il doit alors vous en informer dans le premier mois).</li>
+      <li>La demande doit être adressée au responsable de traitement, ou à son délégué à la protection des données (DPO) s'il en existe un.</li>
+      <li>En l'absence de réponse ou en cas de réponse insatisfaisante, vous pouvez saisir la <strong>CNIL</strong>.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>1. Suivez le délai de réponse</h2>
+    <div class="field">
+      <label for="envoi-date">Date d'envoi de la demande</label>
+      <input type="date" id="envoi-date">
+    </div>
+    <p id="delay-result" class="delay-result" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h2>2. Rédigez votre demande</h2>
+    <form id="declaration-form">
+      <fieldset>
+        <legend>Vous</legend>
+        <div class="field">
+          <label for="nom">Nom et prénom</label>
+          <input type="text" id="nom" required>
+        </div>
+        <div class="field">
+          <label for="adresse">Adresse</label>
+          <textarea id="adresse" rows="2"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>La demande</legend>
+        <div class="field">
+          <label for="organisme">Organisme destinataire</label>
+          <input type="text" id="organisme">
+        </div>
+        <div class="field">
+          <label for="droit">Droit exercé</label>
+          <select id="droit">
+            <option value="droit d'accès à mes données personnelles">Droit d'accès</option>
+            <option value="droit de rectification de mes données personnelles">Droit de rectification</option>
+            <option value="droit à l'effacement de mes données personnelles">Droit à l'effacement</option>
+            <option value="droit d'opposition au traitement de mes données personnelles">Droit d'opposition</option>
+            <option value="droit à la limitation du traitement de mes données personnelles">Droit à la limitation du traitement</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="precisions">Précisions (données concernées, motif si rectification/effacement…)</label>
+          <textarea id="precisions" rows="4"></textarea>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="button" id="generate-pdf" class="btn-primary">Générer la demande PDF</button>
+        <button type="reset" class="btn-secondary">Effacer le formulaire</button>
+      </div>
+      <p class="hint small">Adressez-la de préférence par courriel avec accusé de lecture ou en lettre recommandée, pour dater le point de départ du délai de réponse.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Avertissement.</strong> Ce site est un projet indépendant, non édité ni approuvé par la CNIL ni par l'État. Il se limite à générer un document et des repères de délai ; il ne collecte aucune donnée saisie.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../shared/shared.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

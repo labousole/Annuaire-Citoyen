@@ -3,152 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Déclarer une manifestation — outil de génération de document</title>
-<meta name="description" content="Générez votre déclaration préalable de manifestation sur la voie publique. Outil indépendant, gratuit, sans collecte de données.">
+<title>Annuaire citoyen — vos droits, vos démarches</title>
+<meta name="description" content="Une collection d'outils indépendants pour générer les documents officiels dont vous avez besoin pour exercer vos droits.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="shared/style.css">
 </head>
 <body>
 
 <header class="masthead">
   <div class="wrap">
-    <p class="eyebrow">Outil indépendant &middot; non affilié à l'État</p>
-    <h1>Déclarer une manifestation</h1>
-    <p class="lede">Remplissez un formulaire une fois, obtenez un document conforme aux articles L.211-1 à L.211-4 du code de la sécurité intérieure, prêt à envoyer à votre préfecture ou mairie. Rien de ce que vous saisissez n'est transmis à un serveur : tout se passe dans votre navigateur.</p>
+    <p class="eyebrow">Un projet de La Boussole &middot; non affilié à l'État</p>
+    <h1>Vos droits, vos démarches</h1>
+    <p class="lede">Une collection d'outils gratuits pour comprendre un délai, générer le bon document et l'envoyer au bon endroit. Chaque outil fonctionne entièrement dans votre navigateur : aucune donnée saisie n'est jamais transmise à un serveur.</p>
   </div>
 </header>
 
 <main class="wrap">
 
-  <section class="card law" aria-labelledby="law-title">
-    <h2 id="law-title">Le cadre légal, en bref</h2>
-    <ol class="law-list">
-      <li>Les cortèges, défilés, rassemblements de personnes et toute manifestation sur la voie publique sont soumis à une <strong>déclaration préalable</strong> auprès du préfet (zone police) ou du maire (zone gendarmerie).</li>
-      <li>La déclaration doit parvenir à l'autorité <strong>trois jours francs au moins et quinze jours francs au plus</strong> avant la date de la manifestation.</li>
-      <li>Elle doit indiquer : l'identité des organisateurs, le but de la manifestation, le lieu, la date, l'heure de rassemblement et de dispersion, et l'itinéraire s'il y a lieu.</li>
-      <li>Un récépissé vous est délivré à réception. L'autorité peut encadrer l'horaire ou l'itinéraire sans nécessairement interdire l'événement.</li>
-    </ol>
-    <p class="warning"><strong>Article 431-9 du code pénal —</strong> organiser une manifestation sans déclaration préalable, malgré une interdiction, ou avec une déclaration incomplète ou inexacte, est puni de six mois d'emprisonnement et 7&nbsp;500&nbsp;€ d'amende.</p>
-  </section>
+  <section class="card">
+    <h2>Démarches administratives et citoyennes</h2>
+    <div class="tool-grid">
 
-  <section class="card" aria-labelledby="delay-title">
-    <h2 id="delay-title">1. Vérifiez votre délai</h2>
-    <p class="hint">Indiquez la date envisagée de votre manifestation. Le calcul est indicatif — la notion de « jour franc » peut varier selon les jours fériés locaux, vérifiez toujours avec l'autorité destinataire.</p>
-    <div class="field">
-      <label for="event-date">Date envisagée de la manifestation</label>
-      <input type="date" id="event-date" name="event-date">
+      <a class="tool-card" href="declaration-manifestation/index.html">
+        <span class="tag">Délai : 3 à 15 jours francs</span>
+        <h3>Déclarer une manifestation</h3>
+        <p>Générez une déclaration préalable de manifestation sur la voie publique, conforme au code de la sécurité intérieure.</p>
+      </a>
+
+      <a class="tool-card" href="recours-gracieux/index.html">
+        <span class="tag">Délai : 2 mois</span>
+        <h3>Recours gracieux</h3>
+        <p>Contestez une décision administrative directement auprès de l'organisme qui l'a prise.</p>
+      </a>
+
+      <a class="tool-card" href="demande-cada/index.html">
+        <span class="tag">Délai de réponse : 1 mois</span>
+        <h3>Demander un document administratif</h3>
+        <p>Obtenez la communication d'un document détenu par une administration.</p>
+      </a>
+
+      <a class="tool-card" href="demande-rgpd/index.html">
+        <span class="tag">Délai de réponse : 1 mois</span>
+        <h3>Exercer ses droits RGPD</h3>
+        <p>Accès, rectification, effacement ou opposition sur vos données personnelles auprès d'un organisme.</p>
+      </a>
+
+      <a class="tool-card" href="signalement-defenseur/index.html">
+        <span class="tag">Aucun délai strict</span>
+        <h3>Saisir le Défenseur des droits</h3>
+        <p>Signalez une discrimination ou un dysfonctionnement d'un service public.</p>
+      </a>
+
     </div>
-    <p id="delay-result" class="delay-result" role="status" aria-live="polite"></p>
   </section>
 
-  <section class="card" aria-labelledby="form-title">
-    <h2 id="form-title">2. Renseignez votre déclaration</h2>
-    <form id="declaration-form">
+  <section class="card">
+    <h2>Travail</h2>
+    <div class="tool-grid">
 
-      <fieldset>
-        <legend>Organisateur(s)</legend>
-        <div class="field">
-          <label for="org-nom">Nom et prénom (obligatoire)</label>
-          <input type="text" id="org-nom" required>
-        </div>
-        <div class="field">
-          <label for="org-naissance">Date de naissance</label>
-          <input type="date" id="org-naissance">
-        </div>
-        <div class="field">
-          <label for="org-domicile">Domicile</label>
-          <input type="text" id="org-domicile">
-        </div>
-        <div class="row">
-          <div class="field">
-            <label for="org-tel">Téléphone</label>
-            <input type="tel" id="org-tel">
-          </div>
-          <div class="field">
-            <label for="org-mail">Courriel</label>
-            <input type="email" id="org-mail">
-          </div>
-        </div>
-        <div class="field">
-          <label for="org-structure">Association, syndicat ou collectif représenté (facultatif)</label>
-          <input type="text" id="org-structure">
-        </div>
-      </fieldset>
+      <a class="tool-card" href="droit-retrait/index.html">
+        <span class="tag">À faire immédiatement</span>
+        <h3>Droit de retrait</h3>
+        <p>Attestation type face à un danger grave et imminent sur votre lieu de travail.</p>
+      </a>
 
-      <fieldset>
-        <legend>La manifestation</legend>
-        <div class="field">
-          <label for="objet">Objet / but de la manifestation (obligatoire)</label>
-          <textarea id="objet" rows="2" required></textarea>
-        </div>
-        <div class="row">
-          <div class="field">
-            <label for="ville">Commune</label>
-            <input type="text" id="ville">
-          </div>
-          <div class="field">
-            <label for="date-manif">Date</label>
-            <input type="date" id="date-manif">
-          </div>
-        </div>
-        <div class="row">
-          <div class="field">
-            <label for="heure-debut">Heure de rassemblement</label>
-            <input type="time" id="heure-debut">
-          </div>
-          <div class="field">
-            <label for="heure-fin">Heure de dispersion prévue</label>
-            <input type="time" id="heure-fin">
-          </div>
-        </div>
-        <div class="field">
-          <label for="lieu">Lieu de rassemblement</label>
-          <input type="text" id="lieu">
-        </div>
-        <div class="field">
-          <label for="itineraire">Itinéraire projeté (si défilé — laissez vide si rassemblement statique)</label>
-          <textarea id="itineraire" rows="2"></textarea>
-        </div>
-        <div class="field">
-          <label for="participants">Nombre de participants attendus</label>
-          <input type="number" id="participants" min="1">
-        </div>
-        <div class="field">
-          <label for="observations">Observations (service d'ordre, sonorisation, distribution de tracts…)</label>
-          <textarea id="observations" rows="2"></textarea>
-        </div>
-      </fieldset>
+      <a class="tool-card" href="preavis-greve/index.html">
+        <span class="tag">Délai : 5 jours francs</span>
+        <h3>Préavis de grève</h3>
+        <p>Pour les organisations syndicales représentatives, dans les services publics.</p>
+      </a>
 
-      <div class="actions">
-        <button type="button" id="generate-pdf" class="btn-primary">Générer le document PDF</button>
-        <button type="reset" class="btn-secondary">Effacer le formulaire</button>
-      </div>
-      <p class="hint small">Le document généré est un modèle recevable sur le fond. La forme visuelle diffère du formulaire propre à votre préfecture, ce qui n'affecte pas sa validité : c'est le contenu légal qui prime.</p>
-    </form>
-  </section>
-
-  <section class="card" aria-labelledby="prefecture-title">
-    <h2 id="prefecture-title">3. Où l'envoyer</h2>
-    <p class="hint">Sélectionnez un département pour afficher les coordonnées connues. Cet annuaire est partiel et communautaire : vérifiez toujours l'information avant envoi.</p>
-    <div class="field">
-      <label for="departement-select">Département</label>
-      <select id="departement-select"></select>
     </div>
-    <div id="prefecture-details" class="prefecture-details"></div>
+  </section>
+
+  <section class="card">
+    <h2>Consommation et litiges</h2>
+    <div class="tool-grid">
+
+      <a class="tool-card" href="retractation/index.html">
+        <span class="tag">Délai : 14 jours</span>
+        <h3>Lettre de rétractation</h3>
+        <p>Annulez un achat à distance ou hors établissement sans avoir à vous justifier.</p>
+      </a>
+
+      <a class="tool-card" href="contestation-amende/index.html">
+        <span class="tag">Délai : 45 jours (30 si majorée)</span>
+        <h3>Contester une amende</h3>
+        <p>Requête en exonération contre un avis de contravention.</p>
+      </a>
+
+      <a class="tool-card" href="mise-en-demeure/index.html">
+        <span class="tag">Délai laissé au débiteur : au choix</span>
+        <h3>Mise en demeure</h3>
+        <p>Dernière demande amiable formalisée avant toute action judiciaire.</p>
+      </a>
+
+    </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <p><strong>Avertissement.</strong> Ce site est un projet indépendant. Il n'est ni édité ni approuvé par l'État. Il se limite à générer un document et à afficher des informations publiques ; il n'organise, n'héberge ni ne coordonne aucun événement, et ne collecte aucune donnée saisie dans le formulaire. Vérifiez systématiquement les modalités auprès de l'autorité destinataire.</p>
-    <p class="meta">Code source ouvert &middot; contributions bienvenues pour compléter l'annuaire des préfectures.</p>
+    <p><strong>Avertissement.</strong> Ce site est un projet indépendant. Il n'est ni édité ni approuvé par l'État. Chaque outil se limite à rappeler un cadre légal, calculer un délai indicatif et générer un document ; aucun ne collecte, ne transmet ni ne stocke les données saisies. Vérifiez toujours les informations auprès de l'autorité ou de l'organisme concerné avant tout envoi.</p>
+    <p class="meta">Code source ouvert &middot; contributions bienvenues pour ajouter de nouveaux outils ou compléter les annuaires existants.</p>
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lettre de rétractation</title>
+<meta name="description" content="Générez une lettre de rétractation pour un achat à distance ou hors établissement, avec calcul du délai de 14 jours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Outil indépendant &middot; non affilié à l'État</p>
+    <h1>Lettre de rétractation</h1>
+    <p class="lede">Annulez un achat à distance ou hors établissement dans les délais légaux. Rien de ce que vous saisissez n'est transmis à un serveur.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back-link" href="../index.html">&larr; Retour à l'annuaire</a>
+
+  <section class="card law">
+    <h2>Le cadre légal, en bref</h2>
+    <ol class="law-list">
+      <li>Pour un achat conclu à distance (internet, téléphone) ou hors établissement (démarchage à domicile), vous disposez d'un délai de rétractation de <strong>14 jours</strong> (article L221-18 du code de la consommation).</li>
+      <li>Le délai court à compter de la réception du bien, ou de la conclusion du contrat pour une prestation de service.</li>
+      <li>Aucun motif n'est à justifier et aucune pénalité ne peut être appliquée, hors frais de retour du bien le cas échéant.</li>
+      <li>Ce droit ne s'applique pas à certains achats (biens personnalisés, denrées périssables, contenus numériques déjà consommés avec accord exprès, achats en magasin physique…).</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>1. Vérifiez votre délai</h2>
+    <div class="field">
+      <label for="reception-date">Date de réception du bien (ou de conclusion du contrat pour un service)</label>
+      <input type="date" id="reception-date">
+    </div>
+    <p id="delay-result" class="delay-result" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h2>2. Rédigez votre lettre</h2>
+    <form id="declaration-form">
+      <fieldset>
+        <legend>Vous</legend>
+        <div class="field">
+          <label for="nom">Nom et prénom</label>
+          <input type="text" id="nom" required>
+        </div>
+        <div class="field">
+          <label for="adresse">Adresse</label>
+          <textarea id="adresse" rows="2"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>La commande</legend>
+        <div class="field">
+          <label for="vendeur">Nom du vendeur / prestataire</label>
+          <input type="text" id="vendeur">
+        </div>
+        <div class="field">
+          <label for="commande">Référence de commande</label>
+          <input type="text" id="commande">
+        </div>
+        <div class="field">
+          <label for="produit">Bien(s) ou service(s) concerné(s) (obligatoire)</label>
+          <textarea id="produit" rows="2" required></textarea>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="date-commande">Date de commande</label>
+            <input type="date" id="date-commande">
+          </div>
+          <div class="field">
+            <label for="date-reception">Date de réception</label>
+            <input type="date" id="date-reception">
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="button" id="generate-pdf" class="btn-primary">Générer la lettre PDF</button>
+        <button type="reset" class="btn-secondary">Effacer le formulaire</button>
+      </div>
+      <p class="hint small">Envoyez cette lettre avant l'expiration du délai — la date d'envoi fait foi, pas la date de réception par le vendeur.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Avertissement.</strong> Ce site est un projet indépendant, non édité ni approuvé par l'État. Il se limite à générer un document et des repères de délai ; il ne collecte aucune donnée saisie. Vérifiez que votre achat est bien éligible au droit de rétractation.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../shared/shared.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saisine du Défenseur des droits</title>
+<meta name="description" content="Générez une saisine du Défenseur des droits en cas de discrimination ou de dysfonctionnement d'un service public.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Outil indépendant &middot; non affilié à l'État</p>
+    <h1>Saisine du Défenseur des droits</h1>
+    <p class="lede">Signalez une discrimination ou un dysfonctionnement d'un service public. Rien de ce que vous saisissez n'est transmis à un serveur.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back-link" href="../index.html">&larr; Retour à l'annuaire</a>
+
+  <section class="card law">
+    <h2>Le cadre légal, en bref</h2>
+    <ol class="law-list">
+      <li>Le Défenseur des droits est une autorité constitutionnelle indépendante compétente pour les discriminations, les relations avec les services publics, la défense des droits de l'enfant et le respect de la déontologie des professionnels de la sécurité.</li>
+      <li>La saisine est <strong>gratuite</strong> et peut se faire directement, sans obligation d'avoir épuisé d'autres recours au préalable, même si un début de démarche amiable est utile.</li>
+      <li>Il n'existe pas de délai légal strict pour saisir le Défenseur des droits, mais agir rapidement facilite l'instruction du dossier.</li>
+      <li>Le Défenseur des droits peut mener une médiation, formuler des recommandations, ou présenter des observations devant une juridiction.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>Rédigez votre saisine</h2>
+    <form id="declaration-form">
+      <fieldset>
+        <legend>Vous</legend>
+        <div class="field">
+          <label for="nom">Nom et prénom</label>
+          <input type="text" id="nom" required>
+        </div>
+        <div class="field">
+          <label for="adresse">Adresse</label>
+          <textarea id="adresse" rows="2"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Les faits</legend>
+        <div class="field">
+          <label for="domaine">Domaine concerné</label>
+          <select id="domaine">
+            <option value="discrimination">Discrimination</option>
+            <option value="dysfonctionnement d'un service public">Relations avec un service public</option>
+            <option value="droits de l'enfant">Droits de l'enfant</option>
+            <option value="déontologie de la sécurité">Déontologie d'un professionnel de la sécurité</option>
+            <option value="lanceur d'alerte">Protection des lanceurs d'alerte</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="mis-en-cause">Organisme ou personne mise en cause</label>
+          <input type="text" id="mis-en-cause">
+        </div>
+        <div class="field">
+          <label for="faits">Exposé détaillé des faits (obligatoire)</label>
+          <textarea id="faits" rows="6" required placeholder="Dates, chronologie, personnes impliquées, démarches déjà entreprises…"></textarea>
+        </div>
+        <div class="field">
+          <label for="pieces">Pièces jointes</label>
+          <input type="text" id="pieces" placeholder="Ex. courriers échangés, témoignages, décisions reçues…">
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="button" id="generate-pdf" class="btn-primary">Générer la saisine PDF</button>
+        <button type="reset" class="btn-secondary">Effacer le formulaire</button>
+      </div>
+      <p class="hint small">Vous pouvez déposer cette saisine en ligne sur defenseurdesdroits.fr, par courrier, ou auprès d'un délégué territorial.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Avertissement.</strong> Ce site est un projet indépendant, non édité ni approuvé par le Défenseur des droits ni par l'État. Il se limite à générer un document ; il ne collecte aucune donnée saisie.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../shared/shared.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

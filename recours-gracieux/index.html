@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recours gracieux — contester une décision administrative</title>
+<meta name="description" content="Générez un recours gracieux contre une décision administrative, avec calcul du délai de recours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Outil indépendant &middot; non affilié à l'État</p>
+    <h1>Recours gracieux</h1>
+    <p class="lede">Contestez une décision administrative directement auprès de l'organisme qui l'a prise. Rien de ce que vous saisissez n'est transmis à un serveur.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back-link" href="../index.html">&larr; Retour à l'annuaire</a>
+
+  <section class="card law">
+    <h2>Le cadre légal, en bref</h2>
+    <ol class="law-list">
+      <li>Le recours gracieux s'adresse à l'auteur même de la décision contestée (mairie, préfecture, CAF, service fiscal…), pour lui demander de revenir sur sa décision.</li>
+      <li>Il doit en principe être formé dans le <strong>délai de recours contentieux</strong>, généralement de <strong>deux mois</strong> à compter de la notification de la décision — ce délai ne court que si la décision mentionne les voies et délais de recours.</li>
+      <li>Formé dans ce délai, le recours gracieux <strong>interrompt</strong> le délai de recours contentieux : un nouveau délai de deux mois recommence à courir à compter de la réponse (ou du refus implicite après deux mois de silence).</li>
+      <li>Il n'est soumis à aucun formalisme particulier, mais gagne à être motivé, daté et envoyé de préférence en lettre recommandée avec accusé de réception.</li>
+    </ol>
+    <p class="warning"><strong>Attention —</strong> ce calcul est indicatif. Le délai exact dépend de la mention des voies de recours sur la décision reçue ; en cas de doute, agissez sans attendre.</p>
+  </section>
+
+  <section class="card">
+    <h2>1. Vérifiez votre délai</h2>
+    <p class="hint">Indiquez la date de notification (réception) de la décision contestée.</p>
+    <div class="field">
+      <label for="notif-date">Date de notification de la décision</label>
+      <input type="date" id="notif-date">
+    </div>
+    <p id="delay-result" class="delay-result" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h2>2. Rédigez votre recours</h2>
+    <form id="declaration-form">
+      <fieldset>
+        <legend>Vous</legend>
+        <div class="field">
+          <label for="nom">Nom et prénom</label>
+          <input type="text" id="nom" required>
+        </div>
+        <div class="field">
+          <label for="adresse">Adresse</label>
+          <textarea id="adresse" rows="2"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>La décision contestée</legend>
+        <div class="field">
+          <label for="organisme">Organisme destinataire</label>
+          <input type="text" id="organisme" placeholder="Ex. Mairie de …, CAF du …, Direction des finances publiques de …">
+        </div>
+        <div class="field">
+          <label for="reference">Référence de la décision (numéro, date)</label>
+          <input type="text" id="reference">
+        </div>
+        <div class="field">
+          <label for="objet">Objet précis de la décision contestée (obligatoire)</label>
+          <textarea id="objet" rows="2" required></textarea>
+        </div>
+        <div class="field">
+          <label for="motifs">Motifs de la contestation — pourquoi la décision vous semble erronée (obligatoire)</label>
+          <textarea id="motifs" rows="5" required></textarea>
+        </div>
+        <div class="field">
+          <label for="pieces">Pièces jointes (facultatif)</label>
+          <input type="text" id="pieces" placeholder="Ex. copie de la décision, justificatifs…">
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="button" id="generate-pdf" class="btn-primary">Générer le courrier PDF</button>
+        <button type="reset" class="btn-secondary">Effacer le formulaire</button>
+      </div>
+      <p class="hint small">Envoyez de préférence en lettre recommandée avec accusé de réception, à l'organisme même qui a pris la décision.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Avertissement.</strong> Ce site est un projet indépendant, non édité ni approuvé par l'État. Il se limite à générer un document et des repères de délai ; il ne collecte aucune donnée saisie. Vérifiez les modalités auprès de l'organisme destinataire.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../shared/shared.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

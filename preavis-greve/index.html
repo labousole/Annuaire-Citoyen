@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Préavis de grève — fonction publique</title>
+<meta name="description" content="Générez un préavis de grève dans la fonction publique, avec calcul du délai de 5 jours francs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Outil indépendant &middot; non affilié à l'État</p>
+    <h1>Préavis de grève</h1>
+    <p class="lede">Générez un préavis de grève dans les services publics. Réservé aux organisations syndicales représentatives — voir la condition ci-dessous.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back-link" href="../index.html">&larr; Retour à l'annuaire</a>
+
+  <section class="card law">
+    <h2>Le cadre légal, en bref</h2>
+    <ol class="law-list">
+      <li>Dans les services publics (État, collectivités de plus de 10 000 habitants, établissements chargés d'une mission de service public), la grève doit être précédée d'un <strong>préavis</strong> (article L2512-2 du code du travail).</li>
+      <li>Ce préavis doit <strong>émaner d'une organisation syndicale représentative</strong> au niveau national, dans la catégorie professionnelle ou dans l'entreprise concernée — un salarié ou agent isolé ne peut pas le déposer valablement.</li>
+      <li>Il doit parvenir à l'autorité hiérarchique <strong>cinq jours francs</strong> avant le déclenchement de la grève.</li>
+      <li>Il précise les motifs, le champ géographique, l'heure de début et la durée envisagée de la grève.</li>
+      <li>Pendant la durée du préavis, les parties sont tenues de négocier.</li>
+    </ol>
+    <p class="warning"><strong>Attention —</strong> une grève déclenchée moins de cinq jours francs après réception d'un préavis, ou sans préavis valable, est illégale et expose les agents grévistes à une sanction disciplinaire.</p>
+  </section>
+
+  <section class="card">
+    <h2>1. Vérifiez le délai</h2>
+    <div class="field">
+      <label for="date-greve">Date de début de la grève envisagée</label>
+      <input type="date" id="date-greve">
+    </div>
+    <p id="delay-result" class="delay-result" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h2>2. Rédigez le préavis</h2>
+    <form id="declaration-form">
+      <fieldset>
+        <legend>Organisation syndicale</legend>
+        <div class="field">
+          <label for="syndicat">Nom du syndicat (doit être représentatif — voir cadre légal ci-dessus)</label>
+          <input type="text" id="syndicat" required>
+        </div>
+        <div class="field">
+          <label for="signataire">Nom et fonction du signataire</label>
+          <input type="text" id="signataire">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>La grève</legend>
+        <div class="field">
+          <label for="destinataire">Autorité destinataire (employeur, direction, autorité territoriale)</label>
+          <input type="text" id="destinataire">
+        </div>
+        <div class="field">
+          <label for="champ">Champ géographique et catégories de personnel concernées</label>
+          <textarea id="champ" rows="2"></textarea>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="heure-debut">Heure de début</label>
+            <input type="time" id="heure-debut">
+          </div>
+          <div class="field">
+            <label for="duree">Durée envisagée</label>
+            <input type="text" id="duree" placeholder="Ex. 24h, illimitée, reconductible">
+          </div>
+        </div>
+        <div class="field">
+          <label for="motifs">Motifs du recours à la grève (obligatoire)</label>
+          <textarea id="motifs" rows="4" required></textarea>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="button" id="generate-pdf" class="btn-primary">Générer le préavis PDF</button>
+        <button type="reset" class="btn-secondary">Effacer le formulaire</button>
+      </div>
+      <p class="hint small">Adressez le préavis à l'autorité hiérarchique ou à la direction de l'établissement concerné, en respectant le délai de cinq jours francs.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Avertissement.</strong> Ce site est un projet indépendant, non édité ni approuvé par l'État. Il se limite à générer un document et des repères de délai ; il ne collecte aucune donnée saisie. Le dépôt d'un préavis reste soumis aux conditions de représentativité syndicale rappelées ci-dessus.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../shared/shared.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demande de communication de documents administratifs (CADA)</title>
+<meta name="description" content="Générez une demande de communication de documents administratifs et suivez le délai de réponse de l'administration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Outil indépendant &middot; non affilié à l'État</p>
+    <h1>Demande de documents administratifs</h1>
+    <p class="lede">Demandez la communication d'un document détenu par une administration. Rien de ce que vous saisissez n'est transmis à un serveur.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back-link" href="../index.html">&larr; Retour à l'annuaire</a>
+
+  <section class="card law">
+    <h2>Le cadre légal, en bref</h2>
+    <ol class="law-list">
+      <li>Toute personne a le droit d'obtenir communication des documents détenus par une administration dans le cadre de sa mission de service public (code des relations entre le public et l'administration, livre III).</li>
+      <li>L'administration doit répondre dans un délai d'<strong>un mois</strong>. Passé ce délai sans réponse, le silence vaut <strong>refus implicite</strong>.</li>
+      <li>En cas de refus explicite ou implicite, vous pouvez saisir la <strong>CADA</strong> (Commission d'accès aux documents administratifs) dans un délai de <strong>deux mois</strong> à compter du refus — cette saisine est un préalable obligatoire avant tout recours devant le tribunal administratif.</li>
+      <li>La demande n'a pas besoin d'être motivée : vous n'avez pas à justifier pourquoi vous souhaitez le document.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>1. Suivez le délai de réponse</h2>
+    <p class="hint">Indiquez la date d'envoi de votre demande pour connaître la date à partir de laquelle le silence de l'administration vaut refus.</p>
+    <div class="field">
+      <label for="envoi-date">Date d'envoi de la demande</label>
+      <input type="date" id="envoi-date">
+    </div>
+    <p id="delay-result" class="delay-result" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h2>2. Rédigez votre demande</h2>
+    <form id="declaration-form">
+      <fieldset>
+        <legend>Vous</legend>
+        <div class="field">
+          <label for="nom">Nom et prénom</label>
+          <input type="text" id="nom" required>
+        </div>
+        <div class="field">
+          <label for="adresse">Adresse</label>
+          <textarea id="adresse" rows="2"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Le document demandé</legend>
+        <div class="field">
+          <label for="organisme">Administration destinataire</label>
+          <input type="text" id="organisme">
+        </div>
+        <div class="field">
+          <label for="document">Description précise du ou des documents demandés (obligatoire)</label>
+          <textarea id="document" rows="4" required placeholder="Soyez le plus précis possible : nature du document, période, service concerné…"></textarea>
+        </div>
+        <div class="field">
+          <label for="modalite">Modalité de communication souhaitée</label>
+          <select id="modalite">
+            <option value="copie papier">Copie papier</option>
+            <option value="copie numérique par courriel">Copie numérique par courriel</option>
+            <option value="consultation sur place">Consultation sur place</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="button" id="generate-pdf" class="btn-primary">Générer la demande PDF</button>
+        <button type="reset" class="btn-secondary">Effacer le formulaire</button>
+      </div>
+      <p class="hint small">Envoyez de préférence en lettre recommandée avec accusé de réception ou par courriel avec accusé de lecture, pour dater précisément le point de départ du délai.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Avertissement.</strong> Ce site est un projet indépendant, non édité ni approuvé par l'État. Il se limite à générer un document et des repères de délai ; il ne collecte aucune donnée saisie.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../shared/shared.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

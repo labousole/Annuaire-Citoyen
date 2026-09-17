@@ -1,68 +1,84 @@
-# Déclarer une manifestation
+# Vos droits, vos démarches — boîte à outils citoyenne
 
-Outil statique, indépendant et gratuit pour générer une déclaration
-préalable de manifestation sur la voie publique, conforme au contenu
-exigé par les articles L.211-1 à L.211-4 du code de la sécurité
-intérieure.
+Collection d'outils statiques, indépendants et gratuits pour comprendre
+un délai légal et générer le document correspondant, sans jamais
+collecter de données.
 
-**Ce que fait ce site :**
-- Rappelle le cadre légal (délais, contenu obligatoire, sanctions).
-- Calcule la fenêtre de dépôt (3 à 15 jours francs avant l'événement).
-- Génère un document PDF pré-rempli à partir d'un formulaire.
-- Affiche les coordonnées connues de quelques préfectures (annuaire
-  partiel, à compléter).
+## Principe commun à chaque outil
 
-**Ce que ce site ne fait pas :**
-- Il ne collecte, ne transmet ni ne stocke aucune donnée saisie —
-  tout le traitement (calcul, génération du PDF) a lieu dans le
-  navigateur de l'utilisateur.
-- Il n'organise, ne coordonne ni n'héberge aucun événement, et ne
-  propose aucune fonction de mise en relation entre participants.
-- Il n'est ni édité ni approuvé par l'État. Un bandeau le rappelle
-  sur chaque page.
+1. **Cadre légal sourcé** — articles de loi cités, résumés en langage clair.
+2. **Calculateur de délai** quand c'est pertinent (délai avant une
+   action, ou délai pour agir après un événement déclencheur).
+3. **Génération de document côté client** (PDF via jsPDF) — rien
+   n'est envoyé à un serveur, tout se passe dans le navigateur.
+
+## Outils inclus
+
+| Outil | Dossier | Délai clé |
+|---|---|---|
+| Déclarer une manifestation | `declaration-manifestation/` | 3 à 15 jours francs |
+| Recours gracieux | `recours-gracieux/` | 2 mois |
+| Demander un document administratif | `demande-cada/` | réponse sous 1 mois |
+| Exercer ses droits RGPD | `demande-rgpd/` | réponse sous 1 mois |
+| Saisir le Défenseur des droits | `signalement-defenseur/` | aucun délai strict |
+| Droit de retrait | `droit-retrait/` | immédiat |
+| Préavis de grève | `preavis-greve/` | 5 jours francs |
+| Lettre de rétractation | `retractation/` | 14 jours |
+| Contester une amende | `contestation-amende/` | 45 jours (30 si majorée) |
+| Mise en demeure | `mise-en-demeure/` | au choix (8-30 jours) |
+
+## Structure
+
+```
+annuaire-citoyen/
+├── index.html              ← page d'accueil / annuaire
+├── shared/
+│   ├── style.css            ← design system commun
+│   └── shared.js            ← calculateur de délai + générateur PDF génériques
+└── <chaque-outil>/
+    ├── index.html
+    └── app.js                ← logique spécifique à l'outil
+```
+
+`declaration-manifestation/` garde pour l'instant sa propre copie de
+`style.css` et `app.js` (première version du projet) plutôt que le
+module partagé — à harmoniser si vous voulez unifier complètement le
+design system.
 
 ## Déployer sur GitHub Pages
 
-1. Créez un dépôt GitHub et poussez ce dossier tel quel.
-2. Dans les paramètres du dépôt → **Pages**, choisissez la branche
-   `main` et le dossier racine `/`.
-3. Le site sera disponible à `https://<votre-utilisateur>.github.io/<nom-du-depot>/`.
+1. Poussez ce dossier tel quel dans un dépôt GitHub.
+2. Paramètres du dépôt → **Pages** → branche `main`, dossier racine `/`.
+3. Le site est disponible à `https://<votre-utilisateur>.github.io/<nom-du-depot>/`.
 
-Aucune étape de build n'est nécessaire : le site est 100 % statique
-(HTML/CSS/JS), avec génération de PDF côté client via la bibliothèque
-[jsPDF](https://github.com/parallax/jsPDF) chargée depuis un CDN.
+Aucune étape de build : tout est statique, jsPDF est chargé depuis un CDN.
 
-## Compléter l'annuaire des préfectures
+## Ajouter un nouvel outil
 
-Le fichier `prefectures.json` liste les coordonnées connues, par
-département, pour l'envoi de la déclaration. Il est volontairement
-incomplet au démarrage. Pour ajouter un département, ouvrez une
-pull request avec une entrée suivant ce format :
+1. Créez un dossier `<nom-de-loutil>/` avec un `index.html` et un `app.js`.
+2. Réutilisez `shared/style.css` et `shared/shared.js` (voir un outil
+   existant comme modèle, par exemple `retractation/`).
+3. Ajoutez une carte dans `index.html` (page d'accueil) pointant vers
+   le nouvel outil.
+4. Sourcez toujours le cadre légal depuis un texte officiel
+   (legifrance.gouv.fr, service-public.fr, ou un site `.gouv.fr`).
 
-```json
-{
-  "code": "75",
-  "nom": "Paris",
-  "autorite": "Préfecture de police de Paris",
-  "adresse": "…",
-  "telephone": "…",
-  "email": "…",
-  "source": "URL de la page officielle utilisée comme référence"
-}
-```
+## Limites à garder en tête
 
-Sourcez toujours l'information depuis un site `.gouv.fr` officiel.
-
-## Fichiers
-
-- `index.html` — structure de la page
-- `style.css` — mise en forme
-- `app.js` — calculateur de délai, annuaire, génération du PDF
-- `prefectures.json` — données de l'annuaire
+- Les calculs de délai sont **indicatifs**. La notion de « jour franc »
+  et les cas particuliers (jours fériés, week-ends, procédures
+  spécifiques) peuvent faire varier la date exacte — chaque outil le
+  rappelle.
+- Ces outils **génèrent des documents**, ils n'organisent, ne
+  coordonnent ni n'accompagnent aucune démarche collective. C'est ce
+  qui en fait des outils d'information plutôt que des plateformes à
+  risque juridique.
+- Pour un litige complexe ou à fort enjeu, l'avis d'un professionnel
+  du droit (avocat, association agréée, permanence juridique
+  gratuite) reste recommandé.
 
 ## Licence et responsabilité
 
-Projet fourni « en l'état », à but d'information et de facilitation
+Fourni « en l'état », à but d'information et de facilitation
 administrative. Vérifiez systématiquement les informations générées
-et les coordonnées affichées auprès de l'autorité destinataire avant
-tout envoi.
+auprès de l'autorité ou de l'organisme destinataire avant tout envoi.

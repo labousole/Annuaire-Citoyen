@@ -1,0 +1,87 @@
+{
+  "_note": "Annuaire partiel et communautaire. Vérifiez toujours l'information directement auprès de la préfecture avant envoi. Contribuez via une pull request pour compléter la liste.",
+  "departements": [
+    {
+      "code": "02A",
+      "nom": "Corse-du-Sud",
+      "autorite": "Préfecture de la Corse-du-Sud",
+      "adresse": "Palais Lantivy, 20188 Ajaccio Cedex 9",
+      "telephone": "04 95 11 12 13",
+      "email": "prefecture@corse-du-sud.gouv.fr",
+      "source": "https://corse-du-sud.gouv.fr"
+    },
+    {
+      "code": "21",
+      "nom": "Côte-d'Or",
+      "autorite": "Préfecture de la Côte-d'Or — Direction des Sécurités, Bureau défense et sécurité",
+      "adresse": "Préfecture de la Côte-d'Or, 21000 Dijon",
+      "telephone": "",
+      "email": "pref-direction-securites@cote-dor.gouv.fr",
+      "source": "https://cote-dor.gouv.fr"
+    },
+    {
+      "code": "46",
+      "nom": "Lot",
+      "autorite": "Préfecture du Lot (zone police) ou mairie concernée (zone gendarmerie)",
+      "adresse": "Préfecture du Lot, 46000 Cahors",
+      "telephone": "",
+      "email": "",
+      "source": "https://lot.gouv.fr"
+    },
+    {
+      "code": "59",
+      "nom": "Nord",
+      "autorite": "Préfecture du Nord — Service régional de la communication interministérielle",
+      "adresse": "12-14 rue Jean sans Peur, CS 20003, 59039 Lille Cedex",
+      "telephone": "03 20 30 52 50",
+      "email": "pref-communication@nord.gouv.fr",
+      "source": "https://www.nord.gouv.fr",
+      "remarque": "Contact général : demandez à être orienté vers le bureau des sécurités / manifestations sur voie publique."
+    },
+    {
+      "code": "63",
+      "nom": "Puy-de-Dôme",
+      "autorite": "Préfecture du Puy-de-Dôme / mairie de la commune concernée selon la zone",
+      "adresse": "Préfecture du Puy-de-Dôme, 63000 Clermont-Ferrand",
+      "telephone": "",
+      "email": "",
+      "source": "https://www.puy-de-dome.gouv.fr"
+    },
+    {
+      "code": "70",
+      "nom": "Haute-Saône",
+      "autorite": "Préfecture de la Haute-Saône",
+      "adresse": "Préfecture de la Haute-Saône, 70000 Vesoul",
+      "telephone": "",
+      "email": "",
+      "source": "https://www.haute-saone.gouv.fr"
+    },
+    {
+      "code": "81",
+      "nom": "Tarn",
+      "autorite": "Préfecture du Tarn — Cabinet/Direction des Sécurités, Bureau de la Sécurité Intérieure",
+      "adresse": "Préfecture du Tarn, Place de la Préfecture, 81013 Albi Cedex 09",
+      "telephone": "",
+      "email": "pref-declamanifestation@tarn.gouv.fr",
+      "source": "https://tarn.gouv.fr"
+    },
+    {
+      "code": "84",
+      "nom": "Vaucluse",
+      "autorite": "Préfecture de Vaucluse",
+      "adresse": "Préfecture de Vaucluse, 84000 Avignon",
+      "telephone": "04 90 86 20 76 (fax)",
+      "email": "pref-contact@vaucluse.gouv.fr",
+      "source": "https://vaucluse.gouv.fr"
+    },
+    {
+      "code": "971-978",
+      "nom": "Saint-Barthélemy / Saint-Martin",
+      "autorite": "Préfecture de Saint-Barthélemy et Saint-Martin",
+      "adresse": "",
+      "telephone": "",
+      "email": "",
+      "source": "https://www.saint-barth-saint-martin.gouv.fr"
+    }
+  ]
+}

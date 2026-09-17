@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Déclarer une manifestation — outil de génération de document</title>
+<meta name="description" content="Générez votre déclaration préalable de manifestation sur la voie publique. Outil indépendant, gratuit, sans collecte de données.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Outil indépendant &middot; non affilié à l'État</p>
+    <h1>Déclarer une manifestation</h1>
+    <p class="lede">Remplissez un formulaire une fois, obtenez un document conforme aux articles L.211-1 à L.211-4 du code de la sécurité intérieure, prêt à envoyer à votre préfecture ou mairie. Rien de ce que vous saisissez n'est transmis à un serveur : tout se passe dans votre navigateur.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back-link" href="../index.html">&larr; Retour à l'annuaire</a>
+
+  <section class="card law" aria-labelledby="law-title">
+    <h2 id="law-title">Le cadre légal, en bref</h2>
+    <ol class="law-list">
+      <li>Les cortèges, défilés, rassemblements de personnes et toute manifestation sur la voie publique sont soumis à une <strong>déclaration préalable</strong> auprès du préfet (zone police) ou du maire (zone gendarmerie).</li>
+      <li>La déclaration doit parvenir à l'autorité <strong>trois jours francs au moins et quinze jours francs au plus</strong> avant la date de la manifestation.</li>
+      <li>Elle doit indiquer : l'identité des organisateurs, le but de la manifestation, le lieu, la date, l'heure de rassemblement et de dispersion, et l'itinéraire s'il y a lieu.</li>
+      <li>Un récépissé vous est délivré à réception. L'autorité peut encadrer l'horaire ou l'itinéraire sans nécessairement interdire l'événement.</li>
+    </ol>
+    <p class="warning"><strong>Article 431-9 du code pénal —</strong> organiser une manifestation sans déclaration préalable, malgré une interdiction, ou avec une déclaration incomplète ou inexacte, est puni de six mois d'emprisonnement et 7&nbsp;500&nbsp;€ d'amende.</p>
+  </section>
+
+  <section class="card" aria-labelledby="delay-title">
+    <h2 id="delay-title">1. Vérifiez votre délai</h2>
+    <p class="hint">Indiquez la date envisagée de votre manifestation. Le calcul est indicatif — la notion de « jour franc » peut varier selon les jours fériés locaux, vérifiez toujours avec l'autorité destinataire.</p>
+    <div class="field">
+      <label for="event-date">Date envisagée de la manifestation</label>
+      <input type="date" id="event-date" name="event-date">
+    </div>
+    <p id="delay-result" class="delay-result" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="card" aria-labelledby="form-title">
+    <h2 id="form-title">2. Renseignez votre déclaration</h2>
+    <form id="declaration-form">
+
+      <fieldset>
+        <legend>Organisateur(s)</legend>
+        <div class="field">
+          <label for="org-nom">Nom et prénom (obligatoire)</label>
+          <input type="text" id="org-nom" required>
+        </div>
+        <div class="field">
+          <label for="org-naissance">Date de naissance</label>
+          <input type="date" id="org-naissance">
+        </div>
+        <div class="field">
+          <label for="org-domicile">Domicile</label>
+          <input type="text" id="org-domicile">
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="org-tel">Téléphone</label>
+            <input type="tel" id="org-tel">
+          </div>
+          <div class="field">
+            <label for="org-mail">Courriel</label>
+            <input type="email" id="org-mail">
+          </div>
+        </div>
+        <div class="field">
+          <label for="org-structure">Association, syndicat ou collectif représenté (facultatif)</label>
+          <input type="text" id="org-structure">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>La manifestation</legend>
+        <div class="field">
+          <label for="objet">Objet / but de la manifestation (obligatoire)</label>
+          <textarea id="objet" rows="2" required></textarea>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="ville">Commune</label>
+            <input type="text" id="ville">
+          </div>
+          <div class="field">
+            <label for="date-manif">Date</label>
+            <input type="date" id="date-manif">
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="heure-debut">Heure de rassemblement</label>
+            <input type="time" id="heure-debut">
+          </div>
+          <div class="field">
+            <label for="heure-fin">Heure de dispersion prévue</label>
+            <input type="time" id="heure-fin">
+          </div>
+        </div>
+        <div class="field">
+          <label for="lieu">Lieu de rassemblement</label>
+          <input type="text" id="lieu">
+        </div>
+        <div class="field">
+          <label for="itineraire">Itinéraire projeté (si défilé — laissez vide si rassemblement statique)</label>
+          <textarea id="itineraire" rows="2"></textarea>
+        </div>
+        <div class="field">
+          <label for="participants">Nombre de participants attendus</label>
+          <input type="number" id="participants" min="1">
+        </div>
+        <div class="field">
+          <label for="observations">Observations (service d'ordre, sonorisation, distribution de tracts…)</label>
+          <textarea id="observations" rows="2"></textarea>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="button" id="generate-pdf" class="btn-primary">Générer le document PDF</button>
+        <button type="reset" class="btn-secondary">Effacer le formulaire</button>
+      </div>
+      <p class="hint small">Le document généré est un modèle recevable sur le fond. La forme visuelle diffère du formulaire propre à votre préfecture, ce qui n'affecte pas sa validité : c'est le contenu légal qui prime.</p>
+    </form>
+  </section>
+
+  <section class="card" aria-labelledby="prefecture-title">
+    <h2 id="prefecture-title">3. Où l'envoyer</h2>
+    <p class="hint">Sélectionnez un département pour afficher les coordonnées connues. Cet annuaire est partiel et communautaire : vérifiez toujours l'information avant envoi.</p>
+    <div class="field">
+      <label for="departement-select">Département</label>
+      <select id="departement-select"></select>
+    </div>
+    <div id="prefecture-details" class="prefecture-details"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Avertissement.</strong> Ce site est un projet indépendant. Il n'est ni édité ni approuvé par l'État. Il se limite à générer un document et à afficher des informations publiques ; il n'organise, n'héberge ni ne coordonne aucun événement, et ne collecte aucune donnée saisie dans le formulaire. Vérifiez systématiquement les modalités auprès de l'autorité destinataire.</p>
+    <p class="meta">Code source ouvert &middot; contributions bienvenues pour compléter l'annuaire des préfectures.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
