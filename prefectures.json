@@ -2,9 +2,6 @@
   "_note": "Annuaire partiel et communautaire. Vérifiez toujours l'information directement auprès de la préfecture avant envoi. Contribuez via une pull request pour compléter la liste.",
   "departements": [
     {
-  "_note": "Annuaire partiel et communautaire. Vérifiez toujours l'information directement auprès de la préfecture avant envoi. Contribuez via une pull request pour compléter la liste.",
-  "departements": [
-    {
       "code": "01",
       "nom": "Ain",
       "autorite": "Préfecture de l'Ain",
